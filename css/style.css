@@ -1,0 +1,352 @@
+/* Rest */
+* {
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 0; /* Elimina el relleno por defecto */
+  box-sizing: border-box; /* Incluye relleno y borde en las medidas de los elementos */
+}
+
+/* Tipogrfía institucional */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+/* Defino mi paleta cromatica en css */
+:root {
+  --bg-color: #227b94; 
+  --text-color: #ffffff; 
+  --link-color: #007bff; 
+  --hover-bg-color: #227b94; 
+  --dark-background: #16325b; 
+}
+
+/* Estilo de mi body */
+body {
+  font-family: "Red Hat Text", system-ui; /* Aplica la fuente importada */
+  background: var(--bg-color); /* Establece el color de fondo definido */
+}
+
+/* Estilos de mi header */
+
+header {
+
+  width: 100%; /* Ocupa el 100% del ancho de la página */
+  height: auto; /* Altura dinámica según contenido */
+  background: var(--dark-background); /* Fondo oscuro */
+  display: flex; /* Utiliza un diseño flexible para alinear elementos */
+  justify-content: space-between; /* Espacio uniforme entre elementos */
+  gap: 20px; /* Espacio entre elementos secundarios */
+  align-items: center; /* Centra elementos verticalmente */
+  padding: 8px 20px; /* Espacio interno alrededor de los contenidos del header */
+  position: fixed; /* Fija el header en la parte superior */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para dar efecto de elevación */
+  z-index: 1
+}
+
+header a {
+  width: 40px; /* Establece el ancho de los enlaces en el header */
+  
+}
+
+header a img {
+  width: 100%; /* Imagen ocupa el 100% del ancho de su contenedor */
+  height: 100%; /* Imagen ocupa el 100% de la altura de su contenedor */
+  object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+}
+
+header nav ul {
+  display: flex; /* Muestra los elementos de la lista en línea */
+  list-style: none; /* Elimina las viñetas predeterminadas de la lista */
+  gap: 20px; /* Espacio entre los elementos de la lista */
+}
+
+header nav ul li a {
+  width: 100%; /* Enlaces ocupan el ancho completo del contenedor de lista */
+  height: 100%; /* Enlaces ocupan la altura completa */
+  padding: 4px 8px; /* Espacio interno alrededor del texto de los enlaces */
+  font-size: 14px; /* Tamaño de fuente de los enlaces */
+  text-transform: uppercase; /* Convierte texto a mayúsculas */
+  color: var(--text-color); /* Color de texto de los enlaces */
+  text-decoration: none; /* Elimina subrayado de los enlaces */
+  border: 1px solid var(--bg-color); /* Bordes de color de fondo definido */
+  transition: 0.3s ease; /* Transición suave para cambios de estilo */
+}
+
+header nav ul li a:hover {
+  background: var(--hover-bg-color); /* Fondo cambia al pasar el cursor */
+}
+
+/* ESTILOS DEL INDEX */
+
+/* Estilo para el contenedor de imagen en la página principal */
+main .img {
+  width: 100%; /* Ocupa todo el ancho de su contenedor */
+  height: 100vh; /* Ocupa toda la altura de la ventana gráfica */
+  background: url(../img/Creatividad.png); /* Imagen de fondo específica */
+  background-position: center; /* Centra la imagen de fondo */
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
+  display: flex; /* Utiliza diseño flexible */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  padding-top: 500px; /* Espacio superior dentro del contenedor */
+  margin-bottom: 20px; /* Espacio inferior fuera del contenedor */
+}
+
+/* Estilo general de botones */
+.btn {
+  font-size: 16px; /* Tamaño de fuente del texto del botón */
+  font-weight: 500; /* Peso de fuente medio para el texto del botón */
+  display: flex; /* Flexbox para centrar contenido dentro del botón */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  background: var(--dark-background); /* Color de fondo oscuro */
+  color: var(--text-color); /* Color de texto blanco */
+  text-decoration: none; /* Elimina subrayado de texto */
+  transition: 0.3s ease; /* Transición suave para efectos */
+  padding: 8px 24px; /* Espacio interno alrededor del texto */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); /* Sombra alrededor del botón */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  border: 1px solid transparent; /* Borde transparente */
+}
+
+.btn:hover {
+  background: var(--text-color); /* Cambia el fondo al pasar el cursor */
+  color: var(--dark-background); /* Cambia el color de texto al pasar el cursor */
+  border: 1px solid var(--text-color); /* Cambia el color del borde al pasar el cursor */
+}
+
+/* Contenedor de información en la página principal */
+main .info {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 1440px; /* Ancho máximo para la info */
+  height: 120px; /* Altura del contenedor de información */
+  text-align: center; /* Centra el texto */
+  color: var(--text-color); /* Color del texto blanco */
+  margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+
+main .info h1 {
+  font-size: 36px; /* Tamaño de fuente para el título */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  margin-bottom: 10px; /* Espacio inferior del título */
+}
+
+main .info p {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 1200px; /* Ancho máximo para el párrafo */
+  font-size: 18px; /* Tamaño de fuente del texto */
+  line-height: 1.5; /* Altura de línea para legibilidad */
+  margin: 0 auto; /* Centra el párrafo horizontalmente */
+}
+
+/* Estilo específico para un botón de llamada a la acción */
+.btn-hablanos {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 200px; /* Ancho máximo para el botón */
+  margin: 20px auto 40px auto; /* Márgenes superior, lateral y inferior */
+}
+
+/* Estilo para el pie de página */
+footer {
+  width: 100%; /* Ocupa todo el ancho de la página */
+  height: 50px; /* Altura fija del footer */
+  background: var(--dark-background); /* Fondo oscuro */
+  display: flex; /* Flexbox para centrar contenido */
+  justify-content: center; /* Centra contenido horizontalmente */
+  align-items: center; /* Centra contenido verticalmente */
+  color: whitesmoke; /* Color del texto blanco */
+}
+
+/* ESTILOS DE LA PAGINA DE SERVICIOS */
+
+/* Contenedor principal para las tarjetas de servicios */
+.container {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 1440px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  display: grid; /* Utiliza grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); /* Ajusta columnas según el tamaño */
+  grid-template-rows: auto; /* Altura de filas automática */
+  justify-content: center; /* Centra las columnas dentro del contenedor */
+  gap: 20px; /* Espacio entre elementos de la grid */
+  padding: 120px 20px 50px 20px; /* Espaciado interno */
+  transition: 0.3s ease-out; /* Transición suave para cambios */
+}
+
+.container .card {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 100%; /* Ocupa toda la altura del contenedor */
+  box-shadow: 0 0 10px 0 var(--dark-background); /* Sombra alrededor de la tarjeta */
+  border-radius: 16px; /* Bordes redondeados de la tarjeta */
+  overflow: hidden; /* Oculta contenido que desborde */
+}
+
+.container .card img {
+  width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+  height: 100%; /* Imagen ocupa toda la altura de la tarjeta */
+  object-fit: cover; /* Ajusta la imagen para cubrir la tarjeta */
+}
+
+/* Contenedor para videos */
+.container-video {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 1440px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  justify-content: center; /* Centra elementos dentro del contenedor */
+  align-items: center; /* Centra verticalmente los elementos */
+  gap: 20px; /* Espacio entre elementos */
+  padding: 120px 20px 50px 20px; /* Espaciado interno */
+  transition: 0.3s ease-out; /* Transición suave */
+  margin-bottom: 18px; /* Espacio inferior */
+}
+
+/* Contenedor para la sección de contacto */
+.contacto {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 1440px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Alinea los elementos en una columna */
+  gap: 20px; /* Espacio entre elementos */
+  padding: 120px 20px 50px 20px; /* Espaciado interno */
+  transition: 0.3s ease-out; /* Transición suave */
+  margin-bottom: 18px; /* Espacio inferior */
+}
+
+.contacto h1 {
+  text-align: center; /* Centra el título */
+  color: var(--text-color); /* Color del texto blanco */
+  font-size: 36px; /* Tamaño de fuente del título */
+}
+
+/* Estilo para el formulario de contacto */
+form {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 400px; /* Ancho máximo del formulario */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Alinea elementos en columna */
+  padding: 20px; /* Espacio interno alrededor de los elementos del formulario */
+  border-radius: 5px; /* Bordes redondeados del formulario */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+form label {
+  font-size: 16px; /* Tamaño de fuente de las etiquetas */
+  font-weight: 400; /* Peso de fuente normal */
+  color: var(--text-color); /* Color del texto de las etiquetas */
+  margin: 4px 0; /* Espacio superior e inferior */
+  padding-left: 10px; /* Espacio a la izquierda */
+}
+
+form input,
+form textarea {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 40px; /* Altura de los campos de entrada */
+  outline: none; /* Elimina el contorno predeterminado */
+  border: none; /* Sin borde */
+  padding-left: 10px; /* Espacio a la izquierda dentro del campo */
+  margin-bottom: 12px; /* Espacio inferior entre campos */
+}
+
+form textarea {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 120px; /* Altura del área de texto */
+  padding-top: 4px; /* Espacio superior interno */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-size: 14px; /* Tamaño de fuente del texto */
+  font-weight: 500; /* Peso de fuente medio */
+  color: var(--dark-background); /* Color de texto */
+}
+
+form button {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 40px; /* Altura del botón */
+  background: var(--dark-background); /* Color de fondo del botón */
+  color: var(--text-color); /* Color de texto del botón */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  font-weight: 600; /* Peso de fuente grueso */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: 0.3s ease; /* Transición suave */
+  margin-bottom: 120px; /* Espacio inferior */
+}
+
+form button:hover {
+  background: var(--text-color); /* Cambia el fondo al pasar el cursor */
+  color: var(--dark-background); /* Cambia el color de texto al pasar el cursor */
+}
+
+.navbar-brand { 
+  color: whitesmoke;
+  
+  
+}
+/* Propiedades en mi texto del menú de hamburguesa */
+.navbar-brand-txt { 
+  margin: 10px;
+  gap: 10px;
+  color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+  
+}
+.cian:hover { 
+  background-color: #227b94;
+}
+
+.dropdown-menu { 
+  background-color:#16325b;
+}
+
+/* Color de mi menu de hamburguesa */
+.navbar-toggler-icon { 
+  background-color: #227b94;
+}
+
+
+/* Propiedades de mis card en page servicios */
+
+.textos-cards { 
+  
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 40px; /* Altura de los campos de entrada */
+  outline: none; /* Elimina el contorno predeterminado */
+  border: none; /* Sin borde */
+  padding: 10px; /* Espacio a la izquierda dentro del campo */
+  margin-bottom: 12px; /* Espacio inferior entre campos */ 
+  text-decoration: none;
+  text-align: center;
+}
+ 
+/* Media Queries, las voy a dejar en linea de comentario, no termine de mejorar esta sección ya que vi en la clase de bostrap que con dicha web se puede trabjar esto mismo 
+@media screen and (max-width: 768px) {
+  header img {
+              width: 50%;
+  }
+  
+
+  nav ul li {
+      flex-direction: column;
+      align-items: center;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  header {
+      width: 100%;
+      align-items: center;
+  }
+
+  nav ul li {
+      width: 100%;
+      height: auto;
+      flex-direction:column;
+    
+      align-items: center;
+      gap: 10px;
+  }
+}
+
+*/
