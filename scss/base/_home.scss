@@ -1,0 +1,298 @@
+// Defino estilos seccón por seccón
+
+/* Tipografía institucional */
+body {
+  font-family: "Red Hat Text", system-ui;
+  color: $text-color;
+  background: $bg-color;
+}
+
+/* Estilos del header */
+header {
+  width: 100%;
+  height: auto;
+  background: $dark-background;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 8px 20px;
+  position: fixed;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+
+  a {
+    width: 40px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  nav {
+    .navbar-toggler:hover {
+      background-color: $hover-bg-color;
+    }
+
+    .navbar-brand, .navbar-brand-txt {
+      color: $text-color;
+      text-decoration: none;
+    }
+
+    .dropdown-menu {
+      background-color: $dark-background;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+
+      li {
+        a {
+          width: 100%;
+          height: 100%;
+          padding: 4px 8px;
+          font-size: 14px;
+          text-transform: uppercase;
+          color: $text-color;
+          text-decoration: none;
+          border: 1px solid $dark-background;
+          transition: 0.3s ease;
+
+          &:hover {
+            background: $dark-background;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Estilos del index */
+main {
+  .img {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/Creatividad.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 500px;
+    margin-bottom: 20px;
+  }
+
+  .info {
+    width: 100%;
+    max-width: 1440px;
+    height: 120px;
+    text-align: center;
+    color: $text-color;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 36px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    p {
+      width: 100%;
+      max-width: 1200px;
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 0 auto;
+    }
+  }
+}
+
+/* Estilos generales de botones */
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $dark-background;
+  color: $text-color;
+  text-decoration: none;
+  transition: 0.3s ease;
+  padding: 8px 24px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: $text-color;
+    color: $dark-background;
+    border: 1px solid $text-color;
+  }
+
+  &.btn-hablanos {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 40px auto;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: 0.3s ease;
+    }
+  }
+}
+
+/* Estilos del footer */
+footer {
+  width: 100%;
+  height: 50px;
+  background: $dark-background;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  color: whitesmoke;
+}
+
+/* Estilos de la página de servicios */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 20px;
+  padding: 120px 20px 50px 20px;
+  transition: 0.3s ease-out;
+
+  .card {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 0 $dark-background;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: $link-color;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05); // Animación de agrandamiento
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/* Estilos de la página de contacto */
+.contacto {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 120px 20px 50px 20px;
+  transition: 0.3s ease-out;
+  margin-bottom: 18px;
+
+  h1 {
+    text-align: center;
+    color: $text-color;
+    font-size: 36px;
+  }
+
+  form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+
+    label {
+      font-size: 16px;
+      font-weight: 400;
+      color: $text-color;
+      margin: 4px 0;
+      padding-left: 10px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      height: 40px;
+      outline: none;
+      border: none;
+      padding-left: 10px;
+      margin-bottom: 12px;
+    }
+
+    textarea {
+      height: auto;
+    }
+  }
+}
+
+/* Sección de videos */
+.container-video {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 120px 20px 50px 20px;
+  transition: 0.3s ease-out;
+  margin-bottom: 18px;
+}
+
+/* Navbar estilos */
+.navbar {
+  background-color: $dark-background;
+  padding: 1rem;
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+
+    .nav-link {
+      color: $link-color;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1); // Agranda los ítems al hacer hover
+        color: $link-color; // Cambia a $link-color en hover
+      }
+    }
+
+    // Dropdown
+    .dropdown-menu {
+      background-color: $dark-background;
+
+      .dropdown-item {
+        color: $link-color;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1); // Agranda los ítems del dropdown al hacer hover
+          color: $link-color; // Cambia a $link-color en hover
+        }
+      }
+    }
+  }
+}
+
