@@ -168,7 +168,7 @@ footer {
   max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 120px 20px 50px 20px;
   transition: 0.3s ease-out;
@@ -284,22 +284,26 @@ footer {
 .navbar {
   background-color: $dark-background;
   padding: 1rem; 
+  
 
   .navbar-nav {
     display: flex;
-    align-items: center;  
+    align-items: center;
+
+     
 
     .nav-link {
       color: $link-color;
       padding: 0.5rem 1rem;
       transition: all 0.3s ease;
+      
 
       &:hover {
         transform: scale(1.1); // Agranda los ítems al hacer hover
         color: $link-color; // Cambia a $link-color en hover
       }
-  }
-
+  
+}
     
 
     // Dropdown
